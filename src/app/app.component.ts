@@ -11,7 +11,7 @@ export class AppComponent {
     setInterval( ()=>{
       this.temperaturaControlada++;
       this.temperaturaControlada2++;
-    }, 255 );
+    }, 1255 );
   }
 
   temperaturaControlada: number = 10;
