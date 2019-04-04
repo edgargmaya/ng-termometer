@@ -1,0 +1,24 @@
+<div id="mainContainer">
+
+  <span id="topLabel"> - 100%</span>
+  <span id="middleLabel"> - 50%</span>
+  <span id="bottomLabel"> - 0%</span>
+
+  <div id="indicador">
+    <div [ngClass]="claseColor" id="tmpState" [ngStyle]="{ 'height' : tmpLabel+'%' }"> </div>
+  </div>
+
+  <div class="notification" [ngSwitch]="claseColor">
+    <div *ngSwitchCase="'verde'" >
+      <p>Medición estable</p>
+    </div>
+    <div *ngSwitchCase="'amarillo'" >
+      <h2>¡Alerta! Podria haber una falla</h2>
+    </div>
+    <div *ngSwitchCase="'rojo'" >
+      <h1>¡Peligro!</h1>
+    </div>
+  </div>
+
+</div>
+

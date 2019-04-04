@@ -6,5 +6,23 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'directicas';
+
+  constructor(){
+    setInterval( ()=>{
+      this.temperaturaControlada++;
+      this.temperaturaControlada2++;
+    }, 255 );
+  }
+
+  temperaturaControlada: number = 10;
+  temperaturaControlada2: number = 10;
+
+  subirTmp(){
+    this.temperaturaControlada++;
+  }
+
+  bajarTmp(){
+    this.temperaturaControlada--;
+  }
+
 }
